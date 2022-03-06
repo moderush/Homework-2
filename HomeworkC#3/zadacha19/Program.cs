@@ -20,8 +20,7 @@ void palindrom(int number)
        {
        Console.WriteLine("Заданное число не является палиндромом");
        }
-
-     
+    
 }
 
 
