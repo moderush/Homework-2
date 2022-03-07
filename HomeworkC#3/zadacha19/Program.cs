@@ -1,25 +1,14 @@
-﻿Console.WriteLine("Задача 19: Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.");
-Console.Write("Введите пятизначное число: ");
-int num = int.Parse(Console.ReadLine());
+﻿Console.WriteLine("Задача 23:Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N. ");
+Console.Write("Введите N от 1 до 100): ");
+byte N = Convert.ToByte(Console.ReadLine());
+Console.WriteLine("");
 
-palindrom(num);
-void palindrom(int number)
+for (int i = 1; i <= N; ++i)
 {
-    while (number < 10000 || number > 99999)
-    {
-        Console.WriteLine("Укажите пятизначное число");
-        number = int.Parse(Console.ReadLine());
-    }
-    int digital1 = number / 10000;
-    int digital2 = number / 1000 % 10;
-    int digital4 = number / 10 % 10;
-    int digital5 = number % 10;
-    if (digital1 == digital5 && digital2 == digital4)
-        Console.WriteLine("Заданное число является палиндромом");
-    else
-    {
-        Console.WriteLine("Заданное число не является палиндромом");
-    }
-
-
+    string Text = "_________________\n";
+    Text = Text + "| " + i + "\t| " + i * i * i + "\t| ";
+    Console.WriteLine(Text);
 }
+Console.WriteLine("_________________");
+
+
